@@ -1,4 +1,6 @@
 #include "binary_trees.h"
+#include <stdio.h>
+#include <stdlib.h>
 
 /**
  * binary_tree_leaves - counts the leaves in a bt
@@ -7,16 +9,9 @@
 */
 size_t binary_tree_leaves(const binary_tree_t *tree)
 {
-	int leave_count;
-
-	leave_count = 0;
 	if (!tree)
-		return (leave_count);
-	if (tree->left)
-		leave_count++;
-	if (tree->right)
-		leave_count++;
-	if (tree->right == NULL && tree->left == NULL)
-		leave_count++;
-	return (leave_count);
+		return (0);
+	if (!tree->right && !tree->left)
+		return (1);
+	return (binary_tree_leaves(tree->right) + binary_tree_leaves(tree->left));
 }
