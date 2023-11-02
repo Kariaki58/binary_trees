@@ -75,7 +75,5 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
 	count_tree_node = count_tree_nodes(tree);
 	
 	n_nodes = (2 * count_tree_leave) - 1;
-	printf("count_nodes  %d\n", count_tree_node);
-	printf("n_nodes %d\n", n_nodes);
 	return ((n_nodes == count_tree_node) && (r_height(tree) == l_height(tree)));
 }
