@@ -36,7 +36,6 @@ const binary_tree_t *second)
 
 	depth_1 = depth_node(first);
 	depth2 = depth_node(second);
-	printf("depth_1 %d --- depth_2 %d\n", depth_1, depth2);
 	while (depth_1 > depth2)
 	{
 		first = first->parent;
