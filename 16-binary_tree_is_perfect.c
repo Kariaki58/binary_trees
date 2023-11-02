@@ -58,7 +58,7 @@ size_t count_tree_nodes(const binary_tree_t *tree)
 {
 	if (!tree)
 		return (0);
-	return count_tree_nodes(tree->right) + count_tree_nodes(tree->left) + 1;
+	return (count_tree_nodes(tree->right) + count_tree_nodes(tree->left) + 1);
 }
 
 /**
@@ -69,11 +69,11 @@ size_t count_tree_nodes(const binary_tree_t *tree)
 int binary_tree_is_perfect(const binary_tree_t *tree)
 {
 	int count_tree_node, count_tree_leave, n_nodes;
+
 	if (!tree)
-		return(0);
+		return (0);
 	count_tree_leave = count_leaves(tree);
 	count_tree_node = count_tree_nodes(tree);
-	
 	n_nodes = (2 * count_tree_leave) - 1;
 	return ((n_nodes == count_tree_node) && (r_height(tree) == l_height(tree)));
 }
