@@ -47,7 +47,7 @@ void binary_tree_levelorder(const binary_tree_t *tree, void (*func)(int))
 	size = tree_size((binary_tree_t *)tree);
 	array = malloc(size * sizeof(int));
 	conversion((binary_tree_t *)tree, array, 0);
-	
+
 	while (i < size)
 	{
 		func(array[i]);
