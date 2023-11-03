@@ -3,14 +3,14 @@
 #include <stdio.h>
 
 /**
- * r_height - height of a binary tree
+ * height - height of a binary tree
  * @tree: tree
  * Return: height of tree
 */
 size_t height(const binary_tree_t *tree)
 {
 	size_t l_height, r_height, max_height;
-	
+
 	if (!tree)
 		return (0);
 	if (tree->left)
